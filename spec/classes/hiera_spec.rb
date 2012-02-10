@@ -1,9 +1,5 @@
 require 'spec_helper'
 describe 'hiera', :type => :class do
-  let :default_params do
-    {
-    }
-  end
 
   describe 'testing' do
     opensource = [ '2.7.10', '2.6.12']
@@ -76,5 +72,6 @@ describe 'hiera', :type => :class do
         end
       end
     end
+
   end
 end
