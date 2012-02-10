@@ -17,7 +17,7 @@ class hiera::data {
   }
 
   $mode       = '0644'
-  $source     = 'puppet:///modules/${module_name}/hiera.yaml'
+  $source     = "puppet:///modules/${module_name}/hiera.yaml"
   $version    = present
   $confdir    = inline_template("<%= Puppet[:confdir] %>")
   $modulepath = inline_template("<%= Puppet[:modulepath].split(':').first %>")
