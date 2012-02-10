@@ -46,7 +46,7 @@ class hiera (
   $confdir        = $hiera::data::confdir,
   $modulepath     = $hiera::data::modulepath,
   $dependency     = true,
-  $install_method = 'git',
+  $install_method = 'git'
 ) inherits hiera::data {
 
   package { 'hiera':
