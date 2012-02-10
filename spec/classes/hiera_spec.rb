@@ -57,7 +57,7 @@ describe 'hiera', :type => :class do
 
         it 'should deploy hiera.yaml with correct permission' do
           should contain_file('/etc/puppetlabs/puppet/hiera.yaml').with({
-            'owner' => 'puppet',
+            'owner' => 'pe-puppet',
             'group' => 'pe-puppet'
           })
         end
