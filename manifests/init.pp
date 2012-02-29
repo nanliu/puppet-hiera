@@ -81,7 +81,7 @@ class hiera (
       $command = 'git clone git://github.com/puppetlabs/hiera-puppet'
 
       if $dependency {
-        package { 'git':
+        package { $hiera::data::git_package:
           ensure => present,
           before => Exec['hiera-puppet'],
         }

@@ -16,6 +16,11 @@ class hiera::data {
     $target   = 'opensource'
   }
 
+  $git_package = $operatingsystem ? {
+    'Ubuntu' => 'git-core',
+    default  => 'git',
+  }
+
   $mode       = '0644'
   $source     = "puppet:///modules/${module_name}/hiera.yaml"
   $version    = present
